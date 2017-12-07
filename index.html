@@ -45,13 +45,15 @@
     <div class="container">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <div class=" panel panel-default ">
-          <div class="panel-heading ">Title</div>
-          <div class="panel-heading ">Writer</div>
+        <div class="panel panel-default ">
+          <div class="panel-heading text-center">
+            <h2><strong>{{post.title}}</strong></h2>
+          </div>
+          <div class="panel-heading ">
+            <h3>Author:"{{post.author}}"</h3>
+          </div>
           <div class="panel-body ">
-            <pre>Content
-new line
-            content</pre>
+            <pre><h3>{{post.content}}</h3></pre>
           </div>
         </div>
 
@@ -63,7 +65,20 @@ new line
     var app = new Vue({
       el: '#app',
       data: {
-
+        post: {
+          title: 'where is my cow??',
+          author: 'cow finder',
+          content: 'my cow is bye\nwhere can i find it QQ'
+        },
+        posts: [{
+          title: 'where is my cow',
+          author: 'cow finder',
+          content: 'my cow is bye\n where can i find it QQ'
+        }, {
+          title: 'i found a cow in my office',
+          author: 'garmin worker',
+          content: 'my cow is bye\n where can i find it QQ'
+        }]
       },
       methods: {}
     })
